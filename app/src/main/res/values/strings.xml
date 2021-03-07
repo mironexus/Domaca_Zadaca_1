@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Domaca Zadaca 1</string>
+    <string name="show">Show</string>
+    <string name="hide">Hide</string>
 </resources>
