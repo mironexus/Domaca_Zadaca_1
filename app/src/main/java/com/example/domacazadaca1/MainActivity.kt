@@ -3,7 +3,12 @@ package com.example.domacazadaca1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.Fragment
 import com.example.domacazadaca1.databinding.ActivityMainBinding
+import com.example.domacazadaca1.fragments.AddFragment
+import com.example.domacazadaca1.fragments.ContactsFragment
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_add.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,9 +19,24 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toggleButton.setOnClickListener{
-            binding.helloWorld.visibility = if (binding.helloWorld.visibility == View.VISIBLE) { View.INVISIBLE } else { View.VISIBLE }
-            binding.toggleButton.text = if (binding.toggleButton.text == getString(R.string.hide)) { getString(R.string.show) } else { getString(R.string.hide) }
+        val addFragment = AddFragment()
+        val contactsFragment = ContactsFragment()
+
+        binding.bottomNav.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.add -> setFragment(addFragment)
+                R.id.contacts -> setFragment(contactsFragment)
+            }
+            true
+        }
+
+    }
+
+    private fun setFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frag_container, fragment)
+            commit()
         }
     }
+
 }
