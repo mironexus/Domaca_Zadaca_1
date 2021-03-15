@@ -2,13 +2,8 @@ package com.example.domacazadaca1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.domacazadaca1.databinding.ActivityMainBinding
-import com.example.domacazadaca1.fragments.AddFragment
-import com.example.domacazadaca1.fragments.ContactsFragment
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_add.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +16,9 @@ class MainActivity : AppCompatActivity() {
 
         val addFragment = AddFragment()
         val contactsFragment = ContactsFragment()
+
+        //sets default fragment
+        setFragment(addFragment)
 
         binding.bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId) {
