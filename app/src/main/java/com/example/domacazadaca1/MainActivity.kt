@@ -3,6 +3,8 @@ package com.example.domacazadaca1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.domacazadaca1.contacts.add.AddFragment
+import com.example.domacazadaca1.contacts.phonebook.ContactsFragment
 import com.example.domacazadaca1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val addFragment = AddFragment()
-        val contactsFragment = ContactsFragment()
+        val contactsFragment =
+            ContactsFragment()
 
         //sets default fragment
         setFragment(addFragment)

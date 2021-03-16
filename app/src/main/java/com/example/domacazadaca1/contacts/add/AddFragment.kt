@@ -1,4 +1,4 @@
-package com.example.domacazadaca1
+package com.example.domacazadaca1.contacts.add
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import com.example.domacazadaca1.models.Contact
+import com.example.domacazadaca1.R
+import com.example.domacazadaca1.SharedContactViewModel
 import com.example.domacazadaca1.databinding.FragmentAddBinding
 
 class AddFragment : Fragment() {
@@ -40,7 +44,18 @@ class AddFragment : Fragment() {
             }
             //send the input to the viewmodel
             else {
-                sharedViewModel.addContact(name.toString(), surname.toString(), age.toString().toInt(), faculty.toString(), oib.toString().toLong())
+
+                var newContact = Contact(
+                    name.toString(),
+                    surname.toString(),
+                    age.toString().toInt(),
+                    faculty.toString(),
+                    oib.toString().toLong()
+                )
+
+                sharedViewModel.contacts.observe(viewLifecycleOwner, Observer {
+                    sharedViewModel.addContact(newContact)
+                })
 
                 name.clear()
                 surname.clear()

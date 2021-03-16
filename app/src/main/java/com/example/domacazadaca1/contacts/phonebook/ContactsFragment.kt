@@ -1,4 +1,4 @@
-package com.example.domacazadaca1
+package com.example.domacazadaca1.contacts.phonebook
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.domacazadaca1.R
+import com.example.domacazadaca1.SharedContactViewModel
+import com.example.domacazadaca1.contacts.adapters.RecycleAdapter
 import com.example.domacazadaca1.databinding.FragmentContactsBinding
 
 class ContactsFragment : Fragment() {
@@ -25,10 +28,13 @@ class ContactsFragment : Fragment() {
         val view = binding.root
 
 
-        if (!sharedViewModel.contactMutableList.isNullOrEmpty()) {
+        if (!sharedViewModel.contacts.value.isNullOrEmpty()) {
             binding.contactsText.text = getString(R.string.contacts)
 
-            binding.recyclerView.adapter = RecycleAdapter(sharedViewModel.contactMutableList)
+            binding.recyclerView.adapter =
+                RecycleAdapter(
+                    sharedViewModel.contacts
+                )
             binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
             binding.recyclerView.setHasFixedSize(true)
 

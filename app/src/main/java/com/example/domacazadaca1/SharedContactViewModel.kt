@@ -1,13 +1,19 @@
 package com.example.domacazadaca1
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.domacazadaca1.models.Contact
 
 class SharedContactViewModel: ViewModel() {
 
-    var contactMutableList = mutableListOf<Contact>()
+    var contacts = MutableLiveData<ArrayList<Contact>>()
 
-    fun addContact(name: String, surname: String, age: Int, faculty: String, oib: Long) {
-        contactMutableList.add(Contact(name, surname, age, faculty, oib))
+    init {
+        contacts.value = arrayListOf()
+    }
+
+    fun addContact(contact: Contact) {
+        contacts.value?.add(contact)
     }
 
 }
