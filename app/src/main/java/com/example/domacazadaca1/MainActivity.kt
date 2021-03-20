@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val addFragment = AddFragment()
-        val contactsFragment =
-            ContactsFragment()
+        val contactsFragment = ContactsFragment()
 
         //sets default fragment
         setFragment(addFragment)

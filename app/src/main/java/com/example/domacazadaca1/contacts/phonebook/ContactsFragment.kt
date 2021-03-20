@@ -29,8 +29,9 @@ class ContactsFragment : Fragment() {
 
 
         if (!sharedViewModel.contacts.value.isNullOrEmpty()) {
-            binding.contactsText.text = getString(R.string.contacts)
 
+            binding.contactsText.visibility = View.GONE
+            
             binding.recyclerView.adapter =
                 RecycleAdapter(
                     sharedViewModel.contacts
