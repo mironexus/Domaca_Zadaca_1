@@ -53,7 +53,7 @@ class AddFragment : Fragment() {
         binding.addButton.setOnClickListener {
 
             //get views
-            var phoneNumber = binding.phoneNumber.input.text
+//            var phoneNumber = binding.phoneNumber.input.text
             var name = binding.name.input.text
             var surname = binding.surname.input.text
             var age = binding.age.input.text
@@ -82,7 +82,7 @@ class AddFragment : Fragment() {
             else {
 
                 var newContact = Contact(
-                    phoneNumber.toString(),
+                    "",
                     name.toString(),
                     surname.toString(),
                     age.toString().toInt(),
@@ -98,7 +98,7 @@ class AddFragment : Fragment() {
                     sharedViewModel.addContact(newContact)
                 })
 
-                phoneNumber.clear()
+//                phoneNumber.clear()
                 name.clear()
                 surname.clear()
                 age.clear()
@@ -114,15 +114,15 @@ class AddFragment : Fragment() {
 
     private fun setInputStrings() {
         //set types and limits of number EditTexts
-        binding.phoneNumber.input.inputType = TYPE_CLASS_NUMBER
-        binding.phoneNumber.input.filters += InputFilter.LengthFilter(10)
+//        binding.phoneNumber.input.inputType = TYPE_CLASS_NUMBER
+//        binding.phoneNumber.input.filters += InputFilter.LengthFilter(10)
         binding.age.input.inputType = TYPE_CLASS_NUMBER
         binding.age.input.filters += InputFilter.LengthFilter(3)
         binding.oib.input.inputType = TYPE_CLASS_NUMBER
         binding.oib.input.filters += InputFilter.LengthFilter(13)
         //labels and hints of EditTexts
-        binding.phoneNumber.label.text = getString(R.string.label_phone_number)
-        binding.phoneNumber.input.hint = getString(R.string.phone_number_hint)
+//        binding.phoneNumber.label.text = getString(R.string.label_phone_number)
+//        binding.phoneNumber.input.hint = getString(R.string.phone_number_hint)
         binding.name.label.text = getString(R.string.label_name)
         binding.name.input.hint = getString(R.string.name_hint)
         binding.surname.label.text = getString(R.string.label_surname)
