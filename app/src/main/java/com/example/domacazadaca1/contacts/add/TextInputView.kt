@@ -11,7 +11,7 @@ import com.example.domacazadaca1.R
 import com.example.domacazadaca1.databinding.InputEdittextBinding
 
 enum class DataType{
-    NUMBER, STRING, MAIL
+    STRING, NUMBER, MAIL
 }
 
 
@@ -44,16 +44,17 @@ class TextInputView(context: Context, attrs: AttributeSet) : FrameLayout(context
 
 
                 when (dataType) {
+
+                    DataType.STRING.ordinal -> {
+                        binding.input.inputType = TYPE_CLASS_TEXT
+                        if(binding.label.text == resources.getString(R.string.label_phone_number)) binding.input.filters += InputFilter.LengthFilter(10)
+                    }
                     DataType.NUMBER.ordinal -> {
                         binding.input.inputType = TYPE_CLASS_NUMBER
                         when(binding.label.text) {
                             resources.getString(R.string.label_age)  -> { binding.input.filters += InputFilter.LengthFilter(3) }
                             resources.getString(R.string.label_oib) -> { binding.input.filters += InputFilter.LengthFilter(13) }
                         }
-
-                    }
-                    DataType.STRING.ordinal -> {
-                        binding.input.inputType = TYPE_CLASS_TEXT
                     }
                     DataType.MAIL.ordinal -> {
 
@@ -66,5 +67,22 @@ class TextInputView(context: Context, attrs: AttributeSet) : FrameLayout(context
             }
         }
     }
+
+    fun getText(): String {
+        return binding.input.text.toString()
+    }
+
+    fun getInteger(): Int {
+        return binding.input.text.toString().toInt()
+    }
+
+    fun getLong(): Long {
+        return binding.input.text.toString().toLong()
+    }
+
+    fun clear() {
+        binding.input.text.clear()
+    }
+
 
 }
