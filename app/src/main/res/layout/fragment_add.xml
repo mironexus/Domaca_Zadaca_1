@@ -17,8 +17,9 @@
             android:id="@+id/phone_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:label="@string/label_phone_number"
-            app:input="@string/phone_number_hint"
+            app:label="@string/label_oib"
+            app:hint="@string/phone_number_hint"
+            app:dataType="0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent="0.50" />
