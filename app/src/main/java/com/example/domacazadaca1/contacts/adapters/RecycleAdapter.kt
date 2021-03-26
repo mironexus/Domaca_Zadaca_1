@@ -25,12 +25,17 @@ class RecycleAdapter(private val contactsList: MutableLiveData<ArrayList<Contact
 
     override fun onBindViewHolder(holder: RecycleViewHolder, position: Int) {
         val currentItem = contactsList.value?.get(position)
-        if (currentItem != null) {
-            holder.textView1.text = "${currentItem.name} ${currentItem.surname}, ${currentItem.age}"
+
+        if(currentItem != null) {
+            if (currentItem.favorite)
+            holder.imageView.setImageResource(R.drawable.ic_baseline_star_24)
+
+            holder.textView1.text = "${currentItem.name} ${currentItem.surname}, ${currentItem.gender}, ${currentItem.age}"
+            holder.textView2.text = "${currentItem.phoneNumber}"
+            holder.textView3.text = "${currentItem.email}, ${currentItem.faculty}"
+            holder.textView4.text = "${currentItem.oib}, ${currentItem.country}"
         }
-        if (currentItem != null) {
-            holder.textView2.text = "${currentItem.faculty}, ${currentItem.oib}"
-        }
+
     }
 
 
@@ -39,7 +44,9 @@ class RecycleAdapter(private val contactsList: MutableLiveData<ArrayList<Contact
     class RecycleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.image_view
         val textView1: TextView = itemView.top_info
-        val textView2: TextView = itemView.bottom_info
+        val textView2: TextView = itemView.middle_top_info
+        val textView3: TextView = itemView.middle_bottom_info
+        val textView4: TextView = itemView.bottom_info
     }
 
 

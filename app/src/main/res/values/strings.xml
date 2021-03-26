@@ -8,10 +8,23 @@
     <string name="surname_hint">Ivic</string>
     <string name="age_hint">20</string>
     <string name="faculty_hint">TVZ</string>
+    <string name="oib_hint">1234567891234</string>
     <string name="label_name">Name</string>
     <string name="label_surname">Surname</string>
     <string name="label_age">Age</string>
     <string name="label_faculty">Faculty</string>
     <string name="label_oib">OIB</string>
-    <string name="empty_info">Please enter full information</string>
+    <string name="empty_info">Please enter full information!</string>
+    <string name="male">Male</string>
+    <string name="female">female</string>
+    <string name="gender">Gender</string>
+    <string name="country">Country</string>
+    <string name="age_limit_info">Age must be positive and below 120!</string>
+    <string name="oib_limit_info">Oib must be positive!</string>
+    <string name="favorite">Favorite</string>
+    <string name="email_info">Please enter email in correct form!</string>
+    <string name="label_phone_number">Phone number</string>
+    <string name="phone_number_hint">0981234567</string>
+    <string name="label_email">Email address</string>
+    <string name="email_hint">username@mail.com</string>
 </resources>

@@ -9,148 +9,163 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="20dp">
+        android:padding="20dp"
+        android:background="@color/gray_purple">
 
-        <TextView
-            android:id="@+id/add_text"
-            android:layout_width="match_parent"
+
+        <com.example.domacazadaca1.contacts.add.TextInputView
+            android:id="@+id/phone_number"
+            app:label="@string/label_phone_number"
+            app:hint="@string/phone_number_hint"
+            app:dataType="0"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/add_subtitle"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:textSize="25dp"
-            android:paddingBottom="50dp"
-            />
+            app:layout_constraintWidth_percent="0.50" />
 
-        <TextView
-            android:id="@+id/name_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/label_name"
-            app:layout_constraintTop_toBottomOf="@id/add_text"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            />
-
-        <EditText
+        <com.example.domacazadaca1.contacts.add.TextInputView
             android:id="@+id/name"
-            android:layout_height="wrap_content"
-            android:hint="@string/name_hint"
-            android:inputType="text"
-            app:layout_constraintTop_toBottomOf="@id/name_label"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:label="@string/label_name"
+            app:hint="@string/name_hint"
+            app:dataType="0"
             android:layout_width="0dp"
-            app:layout_constraintWidth_percent="0.60"
-            app:layout_constraintHorizontal_bias="0"
-            />
-
-        <TextView
-            android:id="@+id/surname_label"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/label_surname"
-            app:layout_constraintTop_toBottomOf="@id/name"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_number"
+            app:layout_constraintWidth_percent="0.50" />
 
-        <EditText
+        <com.example.domacazadaca1.contacts.add.TextInputView
             android:id="@+id/surname"
-            android:layout_height="wrap_content"
-            android:hint="@string/surname_hint"
-            android:inputType="text"
-            app:layout_constraintTop_toBottomOf="@id/surname_label"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:label="@string/label_surname"
+            app:hint="@string/surname_hint"
+            app:dataType="0"
             android:layout_width="0dp"
-            app:layout_constraintWidth_percent="0.60"
-            app:layout_constraintHorizontal_bias="0"
-            />
-
-        <TextView
-            android:id="@+id/age_label"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/label_age"
-            app:layout_constraintTop_toBottomOf="@id/surname"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintWidth_percent="0.50" />
 
-        <EditText
+        <com.example.domacazadaca1.contacts.add.TextInputView
             android:id="@+id/age"
-            android:layout_height="wrap_content"
-            android:hint="@string/age_hint"
-            android:inputType="number"
-            app:layout_constraintTop_toBottomOf="@id/age_label"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:label="@string/label_age"
+            app:hint="@string/age_hint"
+            app:dataType="1"
             android:layout_width="0dp"
-            app:layout_constraintWidth_percent="0.60"
-            app:layout_constraintHorizontal_bias="0"
-            />
-
-        <TextView
-            android:id="@+id/faculty_label"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/label_faculty"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/surname"
+            app:layout_constraintWidth_percent="0.50" />
+
+        <com.example.domacazadaca1.contacts.add.TextInputView
+            android:id="@+id/email"
+            app:label="@string/label_email"
+            app:hint="@string/email_hint"
+            app:dataType="0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/age"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            />
+            app:layout_constraintWidth_percent="0.50" />
 
-        <EditText
+        <com.example.domacazadaca1.contacts.add.TextInputView
             android:id="@+id/faculty"
-            android:layout_height="wrap_content"
-            android:hint="@string/faculty_hint"
-            android:inputType="text"
-            app:layout_constraintTop_toBottomOf="@id/faculty_label"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:label="@string/label_faculty"
+            app:hint="@string/faculty_hint"
+            app:dataType="0"
             android:layout_width="0dp"
-            app:layout_constraintWidth_percent="0.60"
-            app:layout_constraintHorizontal_bias="0"
-            />
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            app:layout_constraintWidth_percent="0.50" />
+
+        <com.example.domacazadaca1.contacts.add.TextInputView
+            android:id="@+id/oib"
+            app:label="@string/label_oib"
+            app:hint="@string/oib_hint"
+            app:dataType="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/faculty"
+            app:layout_constraintWidth_percent="0.50" />
+
 
         <TextView
-            android:id="@+id/oib_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/label_oib"
-            app:layout_constraintTop_toBottomOf="@id/faculty"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            />
-
-        <EditText
-            android:id="@+id/oib"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            app:layout_constraintTop_toBottomOf="@id/oib_label"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/gender_label"
+            android:text="@string/gender"
             android:layout_width="0dp"
-            app:layout_constraintWidth_percent="0.60"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/phone_number"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.50"
             app:layout_constraintHorizontal_bias="0"
             />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/phone_number"
+            app:layout_constraintTop_toBottomOf="@id/gender_label"
+            app:layout_constraintWidth_percent="0.50"
+            app:layout_constraintHorizontal_bias="0"
+            android:orientation="horizontal"
+            android:checkedButton="@id/radio_male">
+            <RadioButton android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                />
+            <RadioButton android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/country_label"
+            android:text="@string/country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/gender"
+            app:layout_constraintWidth_percent="0.50"
+            app:layout_constraintHorizontal_bias="0"
+            />
+
+        <Spinner
+            android:id="@+id/country_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/country_label"
+            app:layout_constraintWidth_percent="0.50"
+            app:layout_constraintHorizontal_bias="0"
+            />
+
+        <CheckBox android:id="@+id/checkbox_favorite"
+            android:text="@string/favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/surname"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintHorizontal_bias="0"
+            android:button="@null"
+            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+            />
+
 
         <Button
             android:id="@+id/add_button"
             android:text="@string/add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/button_gradient"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInputView">
+        <attr name="label" format="string"/>
+        <attr name="hint" format="string"/>
+        <attr name="dataType" format="integer"/>
+        <attr name="inputLength" format="integer"/>
+    </declare-styleable>
+</resources>
