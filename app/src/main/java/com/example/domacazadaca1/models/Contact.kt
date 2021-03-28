@@ -1,6 +1,7 @@
 package com.example.domacazadaca1.models
 
-data class Contact (val phoneNumber: String,
+data class Contact (val imageUri: String,
+                    val phoneNumber: String,
                     val name: String,
                     val surname: String,
                     val age: Int,

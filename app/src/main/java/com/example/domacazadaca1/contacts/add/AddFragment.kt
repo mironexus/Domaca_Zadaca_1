@@ -47,6 +47,8 @@ class AddFragment : Fragment() {
             }
         countrySpinner.adapter = adapter
 
+        var defaultImageUri = getString(R.string.default_image)
+
         //button onclick
         binding.addButton.setOnClickListener {
 
@@ -67,6 +69,7 @@ class AddFragment : Fragment() {
             else {
 
                 var newContact = Contact(
+                    defaultImageUri,
                     binding.phoneNumber.getText(),
                     binding.name.getText(),
                     binding.surname.getText(),
