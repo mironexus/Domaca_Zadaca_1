@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Domaca Zadaca 1</string>
+    <string name="add">Dodaj</string>
+    <string name="contacts">Kontakti</string>
+    <string name="contacts_hint">Molimo dodajte neke kontakte</string>
+    <string name="add_subtitle">Kreiraj novu osobu</string>
+    <string name="name_hint">Ivo</string>
+    <string name="surname_hint">Ivic</string>
+    <string name="age_hint">20</string>
+    <string name="faculty_hint">TVZ</string>
+    <string name="oib_hint">1234567891234</string>
+    <string name="label_name">Ime</string>
+    <string name="label_surname">Prezime</string>
+    <string name="label_age">Dob</string>
+    <string name="label_faculty">Fakultet</string>
+    <string name="label_oib">OIB</string>
+    <string name="empty_info">Potrebno je unesti sve informacije!</string>
+    <string name="male">Muško</string>
+    <string name="female">Žensko</string>
+    <string name="gender">Spol</string>
+    <string name="country">Zemlja</string>
+    <string name="age_limit_info">Broj godina mora biti pozitivan i iznad 120!</string>
+    <string name="oib_limit_info">Oib mora biti pozitivan broj!</string>
+    <string name="favorite">Favorit</string>
+    <string name="email_info">Potrebno je unesti email u ispravnom formatu!</string>
+    <string name="label_phone_number">Broj telefona</string>
+    <string name="phone_number_hint">0981234567</string>
+    <string name="label_email">Email adresa</string>
+    <string name="email_hint">username@mail.com</string>
+    <string name="settings">Postavke</string>
+    <string name="label_language">Odabir jezika</string>
+    <string name="change">Promijeni</string>
+</resources>

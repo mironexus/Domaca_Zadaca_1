@@ -27,4 +27,7 @@
     <string name="phone_number_hint">0981234567</string>
     <string name="label_email">Email address</string>
     <string name="email_hint">username@mail.com</string>
+    <string name="settings">Settings</string>
+    <string name="label_language">Language selection</string>
+    <string name="change">Change</string>
 </resources>
