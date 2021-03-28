@@ -1,16 +1,12 @@
 package com.example.domacazadaca1.contacts.phonebook
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import coil.transform.RoundedCornersTransformation
 import com.example.domacazadaca1.R
 import com.example.domacazadaca1.databinding.ActivityRecyclerItemBinding
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_recycler_item.view.*
 
 
 private lateinit var binding: ActivityRecyclerItemBinding
@@ -62,12 +58,6 @@ class RecyclerItemActivity : AppCompatActivity() {
         binding.country.infoLabel.text = getString(R.string.country)
         binding.country.infoDetail.text = intent.getStringExtra("country")
 
-        //setting Snackbar
-        Snackbar.make(binding.root, getString(R.string.snackbar_info), Snackbar.LENGTH_INDEFINITE)
-            .setAction(getString(R.string.snackbar_confirmation)) {
-                // Responds to click on the action
-            }
-            .show()
 
 
     }

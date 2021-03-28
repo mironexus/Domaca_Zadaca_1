@@ -8,12 +8,18 @@
         <item name="android:fontFamily">@font/audiowide_regular</item>
     </style>
 
-    <style name="DarkAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="CustomAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#000D32</item>
-        <item name="colorPrimaryDark">#000532</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/dark_red</item>
+        <item name="colorAccent">@color/new_accent</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:fontFamily">@font/audiowide_regular</item>
+        <item name="actionBarSize">90dip</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@color/gray_purple</item>
     </style>
 
 </resources>

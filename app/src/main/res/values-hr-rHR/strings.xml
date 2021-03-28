@@ -30,4 +30,5 @@
     <string name="settings">Postavke</string>
     <string name="label_language">Odabir jezika</string>
     <string name="change">Promijeni</string>
+    <string name="snackbar_info">Odaberite kontakt za prikazivanje punih informacija</string>
 </resources>

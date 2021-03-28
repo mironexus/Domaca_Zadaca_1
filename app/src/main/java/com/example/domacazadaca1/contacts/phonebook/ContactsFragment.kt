@@ -12,6 +12,7 @@ import com.example.domacazadaca1.R
 import com.example.domacazadaca1.SharedContactViewModel
 import com.example.domacazadaca1.contacts.adapters.RecycleAdapter
 import com.example.domacazadaca1.databinding.FragmentContactsBinding
+import com.google.android.material.snackbar.Snackbar
 
 class ContactsFragment : Fragment(), RecycleAdapter.OnItemClickListener {
 
@@ -39,6 +40,13 @@ class ContactsFragment : Fragment(), RecycleAdapter.OnItemClickListener {
                 )
             binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
             binding.recyclerView.setHasFixedSize(true)
+
+            //setting Snackbar
+            Snackbar.make(binding.root, getString(R.string.snackbar_info), Snackbar.LENGTH_INDEFINITE)
+                .setAction(getString(R.string.snackbar_confirmation)) {
+                    // Responds to click on the action
+                }
+                .show()
 
         }
 

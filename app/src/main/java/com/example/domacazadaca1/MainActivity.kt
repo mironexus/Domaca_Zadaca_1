@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.myToolbar)
+
         val addFragment = AddFragment()
         val contactsFragment = ContactsFragment()
         val settingsFragment = SettingsFragment()

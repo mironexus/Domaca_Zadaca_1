@@ -6,4 +6,7 @@
     <color name="white">#FFFFFF</color>
     <color name="gold">#D2AC47</color>
     <color name="gray_purple">#e9e1fa</color>
+    <color name="red">#8F0000</color>
+    <color name="dark_red">#510000</color>
+    <color name="new_accent">#B300FF</color>
 </resources>

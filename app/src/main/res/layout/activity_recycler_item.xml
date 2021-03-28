@@ -10,8 +10,7 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="280dp"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/CustomAppTheme"
         >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -60,7 +59,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
-                android:layout_marginRight="25dp"
+                android:layout_marginEnd="25dp"
                 />
 
             <include layout="@layout/label_and_text"
