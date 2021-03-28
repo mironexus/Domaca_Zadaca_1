@@ -9,8 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="20dp"
-        android:background="@color/gray_purple">
+        android:padding="20dp">
 
 
         <com.example.domacazadaca1.contacts.add.TextInputView
@@ -102,7 +101,7 @@
             app:layout_constraintHorizontal_bias="0"
             />
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        <RadioGroup
             android:id="@+id/gender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -153,7 +152,7 @@
             app:layout_constraintTop_toBottomOf="@id/name"
             app:layout_constraintHorizontal_bias="0"
             android:button="@null"
-            android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
             />
 
 
